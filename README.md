@@ -26,7 +26,7 @@ cd /root/Rabbit/Config && wget -O Config.json  https://ghproxy.com/https://raw.g
 cd /root/Rabbit
 ```
 
-# 安装：
+# 安装：(ARM架构的机器自己将latest改成arm)
 ## 方案一：自行构建镜像(由于有人魔改Rabbit，不再开源)
 ### 先下载源码，上传到此文件夹，再运行接下来的命令
 ```
