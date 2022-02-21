@@ -1,5 +1,11 @@
 # MadRabbit（今天心情好，临时发布）
 
+# 强调三遍，一定要确保机器能访问Gitee，否则跑了enen概不负责，跑路前7天会通知你们删容器，不然也会enen
+
+# 强调三遍，一定要确保机器能访问Gitee，否则跑了enen概不负责，跑路前7天会通知你们删容器，不然也会enen
+
+# 强调三遍，一定要确保机器能访问Gitee，否则跑了enen概不负责，跑路前7天会通知你们删容器，不然也会enen
+
 # 强调一下，rabbit后端与Ark后端无任何关系，魔改个屁啊，Ark源码都没得
 
 # 1.1.1 修复部分bug，增加授权验证，确保正常访问gitee，否则授权不通过enen
@@ -24,7 +30,7 @@ cd /root && mkdir -p  Rabbit && cd Rabbit
 ```
 cd /root/Rabbit && mkdir -p  Config
 ```
-3、下载config.json 配置文件 并且修改自己的配置 不能缺少
+3、下载config.json 配置文件 不要修改配置，先确保能访问gitee，能正常打开网页，否则会跑enen
 ```
 cd /root/Rabbit/Config && wget -O Config.json  https://raw.githubusercontent.com/ht944/MadRabbit/main/Config.json
 ```
@@ -55,6 +61,8 @@ docker pull ht944/rabbit:latest
 ```
 docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Project/Config -p 5701:1234 ht944/rabbit:latest
 ```
+
+# 启动完之后，检查能否正常访问，可以就可以配置配置文件了，然后重启容器
 
 ## 非阿里和腾讯服务器可以忽略这一步:
   ### 使用稳定的http或socks代理，不能有账号密码
