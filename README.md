@@ -11,7 +11,7 @@
 
 # 目前功能：自动过魔方和拼图验证获取ck，wsck提交，未对接芝士，xdd等，不要来问我
 
-# 科学上网的答疑群组 https://t.me/+9DFDGW4mkooxNzk1
+# 科学上网的答疑群组 https://t.me/MadRabbit666
 
 # 配置:
 1、新建一个项目
