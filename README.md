@@ -53,7 +53,7 @@ docker build -t rabbit .
 ```
 ### 启动
 ```
-docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Project/Config -p 5701:1234 rabbit:latest
+cd /root/Rabbit && docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Project/Config -p 5701:1234 rabbit:latest
 ```
 ## 方案二：使用我的镜像
 ```
@@ -61,7 +61,7 @@ docker pull ht944/rabbit:latest
 ```
 ### 启动
 ```
-docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Project/Config -p 5701:1234 ht944/rabbit:latest
+cd /root/Rabbit && docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Project/Config -p 5701:1234 ht944/rabbit:latest
 ```
 
 # 启动完之后，检查能否正常访问，可以就可以配置配置文件了，然后重启容器
