@@ -8,6 +8,8 @@
 
 # 强调一下，rabbit后端与Ark后端无任何关系，魔改个屁啊，Ark源码都没得
 
+# 1.1.4 修复中文pin重复上传问题
+
 # 1.1.3 修复青龙上传bug，页面回收bug
 
 # 1.1.2 修复部分bug，优化授权
@@ -68,7 +70,7 @@ cd /root/Rabbit && docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Proj
 
 # 启动完之后，检查能否正常访问，可以就可以配置配置文件了，然后重启容器
 
-## 非阿里和腾讯服务器可以忽略这一步:
+## 阿里和腾讯服务器可以忽略这一步:
   ### 使用稳定的http或socks代理，不能有账号密码
   格式为：http://xxx.xxx.xxx.xxx:xxxx或socks://xxx.xxx.xxx.xxx:xxxx
   设置配置文件中的proxy即可
