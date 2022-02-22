@@ -78,6 +78,13 @@ cd /root/Rabbit && docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Proj
 # 强调一遍
 ## 配置文件修改后，重新启动容器
 
+
+# 升级
+```
+docker pull ht944/rabbit:latest && cd /root/Rabbit && docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Project/Config -p 5701:1234 ht944/rabbit:latest
+```
+
+
 ## 特别声明:
 
 * 本仓库涉仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.
