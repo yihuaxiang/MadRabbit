@@ -83,7 +83,7 @@ cd /root/Rabbit && docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Proj
 
 # 一键升级
 ```
-docker stop rabbit && docker rm rabbit &&docker pull ht944/rabbit:latest && cd /root/Rabbit && docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Project/Config -p 5701:1234 ht944/rabbit:latest
+docker stop rabbit && docker rm rabbit && docker pull ht944/rabbit:latest && cd /root/Rabbit && docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Project/Config -p 5701:1234 ht944/rabbit:latest
 ```
 
 
