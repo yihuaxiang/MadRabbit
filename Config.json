@@ -5,8 +5,8 @@
   "Announcement": "为提高账户的安全性，请关闭免密支付。",
   "AutoCaptchaCount": "5",
   "proxy": "",
-  "proxy_name": "",
-  "proxy_pwd": "",
+  "ExpirationCron": "30 17 * * *",
+  "BeanCron": "0 20 * * *",
   "APP_TOKEN": "",
   "MY_WP_UID": "",
   "Config": [

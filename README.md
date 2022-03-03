@@ -8,6 +8,8 @@
 
 # 强调一下，rabbit后端与Ark后端无任何关系，魔改个屁啊，Ark源码都没得
 
+# 1.2.0 修复部分bug，取消代理密码认证，比价功能更新，可领取对应商品优惠券，增加账号过期预警和最后一天自动禁用
+
 # 1.1.8 修复ck上传问题，修改授权方式，增加代理账号密码认证，增加比价功能，增加WxPusher一对一，登陆提醒，备注添加WxPusher的用户id
 ## Wxpusher对接时需要填写的回调地址为：http://ip:port/api/bind
 
@@ -76,10 +78,9 @@ cd /root/Rabbit && docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Proj
 # 启动完之后，检查能否正常访问，可以就可以配置配置文件了，然后重启容器
 
 ## 阿里和腾讯服务器可以忽略这一步:
-  ### 使用稳定的http或socks代理
+  ### 使用稳定的http或socks代理(无账号密码认证的代理)
   ### 格式为：http://xxx.xxx.xxx.xxx:xxxx或socks://xxx.xxx.xxx.xxx:xxxx
   ### 设置配置文件中的proxy即可
-  ### 对应的代理账号密码也在配置文件中填写，无密码留空即可
   
 
 # 强调一遍
