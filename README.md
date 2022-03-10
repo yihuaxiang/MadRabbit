@@ -1,46 +1,12 @@
 # MadRabbit
 
-# 重大提醒，使用 http://ip:端口/api/version 查询自己的rabbit版本，如果查不到说明此版本为旧版本，我将在3.8日之后删除gitee授权文件，旧版本必须在3月8日前删除容器和镜像，否则3.8日之后机器将会执行enen脚本，ck失效的后果自负，继续使用本项目须使用新的授权方式，关注仓库和频道通知
+# 1.3.0(amd)版本更新 1.增加授权文件，无授权文件启动容器的后果自负，授权文件在内部群获取
 
-# 重大提醒，使用 http://ip:端口/api/version 查询自己的rabbit版本，如果查不到说明此版本为旧版本，我将在3.8日之后删除gitee授权文件，旧版本必须在3月8日前删除容器和镜像，否则3.8日之后机器将会执行enen脚本，ck失效的后果自负，继续使用本项目须使用新的授权方式，关注仓库和频道通知
+## 获取授权文加后，改名为Rabbit.lic，放在Config目录下，容器启动命令已更新，需用新的启动命令
 
-# 重大提醒，使用 http://ip:端口/api/version 查询自己的rabbit版本，如果查不到说明此版本为旧版本，我将在3.8日之后删除gitee授权文件，旧版本必须在3月8日前删除容器和镜像，否则3.8日之后机器将会执行enen脚本，ck失效的后果自负，继续使用本项目须使用新的授权方式，关注仓库和频道通知
+# 目前功能：自动过魔方和拼图验证获取ck，wsck提交，比价领取优惠券，未对接芝士，xdd等，不要来问我
 
-# 强调一下，rabbit后端与Ark后端无任何关系，魔改个屁啊，Ark源码都没得
-
-# 1.2.6(amd)版本更新 1.修复过期预警时间判断有误bug
-
-# 1.2.5(amd)版本更新 1.修复ck上传数量限制无效bug 2.修复可无限增加定时推送bug 3.修复新接口中文pin的解析问题
-
-# 1.2.4(amd)版本更新 修复资产推送和过期提醒推送失效问题(强制启用)
-
-# 1.2.2 修复部分bug，增加一对一资产推送，增加新的登陆接口（任何服务器均可使用），短信登陆作为备用
-
-# 1.2.0 修复部分bug，取消代理密码认证，比价功能更新，可领取对应商品优惠券，增加账号过期预警和最后一天自动禁用
-
-# 1.1.8 修复ck上传问题，修改授权方式，增加代理账号密码认证，增加比价功能，增加WxPusher一对一，登陆提醒，备注添加WxPusher的用户id
-## Wxpusher对接时需要填写的回调地址为：http://ip:port/api/bind
-
-# 1.1.7 修复https青龙问题，修复一直上传问题，修复一对一备注问题
-
-# 1.1.4 修复中文pin重复上传问题
-
-# 1.1.3 修复青龙上传bug，页面回收bug
-
-# 1.1.2 修复部分bug，优化授权
-
-# 1.1.1 修复部分bug，增加授权验证，确保正常访问gitee，否则授权不通过enen
-
-# 1.1.0 更新最新验证码识别(同样的，只支持自动，5次过不去的自行调高次数)
-## 注意，只支持阿里，腾讯ip
-
-# 1.0.1 修复大量bug，适配Ark备注，增加部分功能
-
-## 外面很多魔改Rabbit，拉了镜像多注意，别ck被偷了，烟雨版魔改Ark(烟雨的和rabbit没关系，仅此声明)属于正版，其他的都有偷ck的可能
-
-# 目前功能：自动过魔方和拼图验证获取ck，wsck提交，未对接芝士，xdd等，不要来问我
-
-# [科学上网的答疑群组](https://t.me/MadRabbit666)
+# [科学上网的答疑群组](https://t.me/+t83Wn3GzdCI3MDc1)
 
 # 配置:
 1、新建一个项目
@@ -68,11 +34,11 @@ cd /root/Rabbit
 ## 方案一：自行构建镜像(由于有人魔改Rabbit，不再开源)
 ### 先下载源码，上传到此文件夹，再运行接下来的命令
 ```
-docker build -t rabbit .
+
 ```
 ### 启动
 ```
-cd /root/Rabbit && docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Project/Config -p 5701:1234 rabbit:latest
+
 ```
 ## 方案二：使用我的镜像
 ```
@@ -80,7 +46,7 @@ docker pull ht944/rabbit:latest
 ```
 ### 启动
 ```
-cd /root/Rabbit && docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Project/Config -p 5701:1234 ht944/rabbit:latest
+cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  "$(pwd)"/Config:/usr/src/Project/Config -it --privileged=true  ht944/rabbit:latest
 ```
 
 # 启动完之后，检查能否正常访问，可以就可以配置配置文件了，然后重启容器
@@ -97,7 +63,7 @@ cd /root/Rabbit && docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Proj
 
 # 一键升级
 ```
-docker stop rabbit && docker rm rabbit && docker pull ht944/rabbit:latest && cd /root/Rabbit && docker run --name rabbit -d  -v "$(pwd)"/Config:/usr/src/Project/Config -p 5701:1234 ht944/rabbit:latest
+docker stop rabbit && docker rm rabbit && docker pull ht944/rabbit:latest && cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  "$(pwd)"/Config:/usr/src/Project/Config -it --privileged=true  ht944/rabbit:latest
 ```
 
 
