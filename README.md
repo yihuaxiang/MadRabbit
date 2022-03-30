@@ -80,9 +80,9 @@ cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  "$(pwd)"/Confi
 * 正常填写其他信息，回调接口填写：http://ip:port/api/bind
 
 ### 授权用户免费10次log实时计算服务
-接口为：http://ip:port/api/log
-关闭计算服务：http://ip:port/api/log1
-启动需要重启
+* 接口为：http://ip:port/api/log
+* 关闭计算服务：http://ip:port/api/log1
+* 启动需要重启
 
 ### 强调一遍
 ### 配置文件修改后，重新启动容器
