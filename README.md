@@ -1,5 +1,8 @@
 # MadRabbit
 
+# 2.0.1(amd)版本额更新
+## 1.更新二验，解决部分需要二验的账号（需要输入身份证前两位和后四位，无需分割，最后一位为X的直接写X，例如：12345X）
+
 # 2.0.0(amd)版本更新
 ## 1.更换登陆地址（健康社区）
 ## 2.优化授权机制
@@ -17,7 +20,7 @@
 
 # 目前功能：自动过魔方和拼图验证获取ck，wsck提交，比价领取优惠券，未对接芝士，xdd等，不要来问我
 
-# [科学上网的答疑群组](https://t.me/+t83Wn3GzdCI3MDc1)
+# [科学上网的频道](https://t.me/Rabbit_one)
 
 # 配置:
 1、新建一个项目
@@ -67,6 +70,13 @@ cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  "$(pwd)"/Confi
   ### 格式为：http://xxx.xxx.xxx.xxx:xxxx或socks://xxx.xxx.xxx.xxx:xxxx
   ### 设置配置文件中的proxy即可
   
+# 对接WXPUSHER
+## 正常其他信息，回调接口填写：http://ip:port/api/bind
+
+# 授权用户免费10次log实时计算服务
+## 接口为：http://ip:port/api/log
+## 关闭计算服务：http://ip:port/api/log1
+## 启动需要重启
 
 # 强调一遍
 ## 配置文件修改后，重新启动容器
