@@ -1,4 +1,5 @@
 {
+  // 注释行必须为"// "，空格必须有，否则解析失败，同理，非注释行不要有"// "否则会被注释掉
   // 最多同时登陆人数
   "MaxTab": "4",
   // 标题
@@ -11,11 +12,14 @@
   "AutoCaptchaCount": "5",
   // 无密码认证的http代理或socks代理
   "proxy": "",
+  // XDD_URL地址
+  "XDD_URL": "",
+  // XDD_TOKEN
+  "XDD_TOKEN": "",
   // 账号过期预警定时
   "ExpirationCron": "30 17 * * *",
   // 账号资产推送定时
   "BeanCron": "0 20 * * *",
-  "APP_TOKEN2": "",
   // WXPUSHER的APP_TOKEN
   "APP_TOKEN": "",
   // WXPUSHER你自己的UID
@@ -23,18 +27,18 @@
   // 青龙配置，必须要有，不同青龙配置用,隔开
   "Config": [
     {
-      // 不要重复的数字
+      // 大于1的不重复数字
       "QLkey": 1,
       // 服务器昵称
       "QLName": "腾讯云",
       // 青龙访问地址
-      "QLurl": "http://xxx.xxx.xxx.xxx:5700",
+      "QLurl": "",
       // 青龙的应用ID
       "QL_CLIENTID": "",
       // 青龙的应用SECRET
       "QL_SECRET": "",
       // CK最大容量
-      "QL_CAPACITY": 40,
+      "QL_CAPACITY": 50,
       // WSCK最大容量
       "QL_WSCK": 40,
       // WXPUSHER的应用token，不推送留空
@@ -47,7 +51,7 @@
       "QLurl": "",
       "QL_CLIENTID": "",
       "QL_SECRET": "",
-      "QL_CAPACITY": 40,
+      "QL_CAPACITY": 50,
       "QL_WSCK": 40,
       "APP_TOKEN": ""
     }
