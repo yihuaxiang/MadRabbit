@@ -100,7 +100,7 @@ cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  "$(pwd)"/Confi
 # 浏览器无法下载的解决方案
 1.下载并解压浏览器
 ```
-cd /root/Rabbit && wget https://mirrors.huaweicloud.com/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip && unzip chrome-linux.zip
+cd /root/Rabbit && wget https://mirrors.huaweicloud.com/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip && unzip chrome-linux.zip && rm  -f chrome-linux.zip
 ```
 2.手动删除原有容器
 3.重启启动容器
