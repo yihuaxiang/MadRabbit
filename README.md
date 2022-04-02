@@ -7,6 +7,10 @@
 #### 2.0.3(amd)版本更新
 * 对接xdd(配置文件已更新，配置好)
 * 更换个人中心用户昵称接口
+
+#### 2.0.3(amd)版本更新
+* 对接xdd(配置文件已更新，配置好)
+* 更换个人中心用户昵称接口
 * 修复部分bug
 * 身份认证出错的，带上日志和Config目录下的截图反馈
 
@@ -92,6 +96,17 @@ cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  "$(pwd)"/Confi
 * 接口为：http://ip:port/api/log
 * 关闭计算服务：http://ip:port/api/log1
 * 启动需要重启
+
+# 浏览器无法下载的解决方案
+1.下载并解压浏览器
+```
+cd /root/Rabbit && wget https://mirrors.huaweicloud.com/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip && unzip chrome-linux.zip
+```
+2.手动删除原有容器
+3.重启启动容器
+```
+cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  "$(pwd)"/Config:/usr/src/Project/Config -v "$(pwd)"/chrome-linux:/usr/src/Project/ChromeBrowser -it --privileged=true  ht944/rabbit:latest
+```
 
 ### 强调一遍
 ### 配置文件修改后，重新启动容器
