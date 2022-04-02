@@ -16,6 +16,8 @@
   "XDD_URL": "",
   // XDD_TOKEN
   "XDD_TOKEN": "",
+  // 是否开启log计算服务，默认不开启
+  "LOG_SIGN": false,
   // 账号过期预警定时
   "ExpirationCron": "30 17 * * *",
   // 账号资产推送定时
