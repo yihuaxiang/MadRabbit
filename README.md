@@ -47,8 +47,6 @@ docker pull ht944/rabbit:latest
 cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  "$(pwd)"/Config:/usr/src/Project/Config -it --privileged=true  ht944/rabbit:latest
 ```
 
-### 启动完之后，检查能否正常访问，可以就可以配置配置文件了，然后重启容器
-
 ### 阿里和腾讯服务器可以忽略这一步：
 > 使用稳定的http或socks代理(无账号密码认证的代理)
 > 格式为：http://xxx.xxx.xxx.xxx:xxxx或socks://xxx.xxx.xxx.xxx:xxxx
@@ -57,21 +55,11 @@ cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  "$(pwd)"/Confi
 ### 对接WXPUSHER
 * 正常填写其他信息，回调接口填写：http://ip:port/api/bind
 
-### 授权用户免费10次log实时计算服务
+### 授权用户免费200次log实时计算服务
+* 计算服务默认关闭，开启需要配置文件配置LOG_SIGN为true
 * 接口为：http://ip:port/api/log
 * 关闭计算服务：http://ip:port/api/log1
-* 启动需要重启
-
-# 浏览器无法下载的解决方案
-1.下载并解压浏览器
-```
-cd /root/Rabbit && wget https://mirrors.huaweicloud.com/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip && unzip chrome-linux.zip && rm  -f chrome-linux.zip
-```
-2.手动删除原有容器
-3.重启启动容器
-```
-cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  "$(pwd)"/Config:/usr/src/Project/Config -v "$(pwd)"/chrome-linux:/usr/src/Project/ChromeBrowser -it --privileged=true  ht944/rabbit:latest
-```
+* 关闭后再启动需要重启
 
 ### 强调一遍
 ### 配置文件修改后，重新启动容器
