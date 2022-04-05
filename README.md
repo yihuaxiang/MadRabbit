@@ -61,6 +61,14 @@ cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  "$(pwd)"/Confi
 * 关闭计算服务：http://ip:port/api/log1
 * 关闭后再启动需要重启
 
+### 家宽ip变化的，搭配ip.sh文件使用，ip变化时，自动重启rabbit
+使用方法：
+1.新建日志文件
+```
+cd /root && mkdir tool.log
+```
+2.下载ip.sh文件，并使用crontab进行定时
+
 ### 强调一遍
 ### 配置文件修改后，重新启动容器
 
