@@ -81,6 +81,10 @@ docker stop rabbit && docker rm rabbit && docker pull ht944/rabbit:latest && cd 
 
 ### 👇更新日志👇
 
+#### 2.0.7(amd/arm)版本更新
+* 适配青龙2.11及以上(需要青龙应用的系统权限)
+* 修复大量bug，解决一些常见问题，如收不到验证码之类的
+
 #### 2.0.6(amd/arm)版本更新
 * 采取内置浏览器方式，无需下载浏览器
 * 适配群辉机器
