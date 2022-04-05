@@ -67,7 +67,7 @@ cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  "$(pwd)"/Confi
 ```
 cd /root && mkdir tool.log
 ```
-2.下载ip.sh文件，并使用crontab进行定时
+2.下载ip.sh文件，并使用crontab进行定时，crontab语法自行百度一下
 
 ### 强调一遍
 ### 配置文件修改后，重新启动容器
