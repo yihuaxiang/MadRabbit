@@ -47,11 +47,6 @@ docker pull ht944/rabbit:latest
 cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  "$(pwd)"/Config:/usr/src/Project/Config -it --privileged=true  ht944/rabbit:latest
 ```
 
-### 阿里和腾讯服务器可以忽略这一步：
-> 使用稳定的http或socks代理(无账号密码认证的代理)
-> 格式为：http://xxx.xxx.xxx.xxx:xxxx或socks://xxx.xxx.xxx.xxx:xxxx
-> 设置配置文件中的proxy即可
-
 ### 对接WXPUSHER
 * 正常填写其他信息，回调接口填写：http://ip:port/api/bind
 
@@ -80,6 +75,16 @@ docker stop rabbit && docker rm rabbit && docker pull ht944/rabbit:latest && cd 
 
 
 ### 👇更新日志👇
+
+#### 2.1.0(amd/arm)版本更新
+* 不再需要腾讯阿里的ip，任何机器均可登陆
+* 可以留空青龙配置，傻妞可对接rabbit
+* 优化前端加载速度（感谢 @svips188 的优化）
+* 更换授权域名
+* 修复xdd不显示登陆成功的bug
+* 修复log计算的bug
+* 修复青龙配置有误无法进入主页的bug
+* 修复一些影响正常使用的bug
 
 #### 2.0.7(amd/arm)版本更新
 * 适配青龙2.11及以上(需要青龙应用的系统权限)
