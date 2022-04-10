@@ -2,7 +2,8 @@
 
 > 获取授权文件后，改名为Rabbit.lic，放在Config目录下，容器启动命令已更新，需用新的启动命令
 
-#### 目前功能：自动过魔方和拼图验证获取ck，wsck提交，比价领取优惠券，未对接芝士，不要来问我
+#### 目前功能：自动过魔方和拼图验证获取ck，wsck提交，比价领取优惠券，仅支持对接青龙、xdd、傻妞，不支持其他工具对接
+#### 傻妞和青龙可共存，青龙配置为空时，无法使用网页端登录
 
 # [👉科学上网的频道](https://t.me/Rabbit_one)
 
@@ -78,7 +79,7 @@ docker stop rabbit && docker rm rabbit && docker pull ht944/rabbit:latest && cd 
 
 #### 2.1.6(amd/arm)版本更新
 * 修复授权问题
-* log请求需携带token，token需在配置文件中设置(示例：http://ip:port/api/log?token=123546)
+* log请求需携带token，token需在配置文件中设置(请求示例：http://ip:port/api/log?token=123546)
 
 #### 2.1.5(amd/arm)版本更新
 * 修改授权，所有人必须更新最新版，无需重新获取授权
