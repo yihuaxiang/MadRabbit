@@ -18,6 +18,8 @@
   "XDD_TOKEN": "",
   // 是否开启log计算服务，默认不开启
   "LOG_SIGN": false,
+  // log计算请求需要携带的token
+  "LOG_TOKEN": "",
   // 账号过期预警定时
   "ExpirationCron": "30 17 * * *",
   // 账号资产推送定时
@@ -60,3 +62,4 @@
     }
   ]
 }
+
