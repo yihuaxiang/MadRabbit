@@ -16,7 +16,7 @@ cd /root && mkdir -p  Rabbit && cd Rabbit
 ```
 cd /root/Rabbit && mkdir -p  Config
 ```
-3、下载config.json 配置文件 不要修改配置，先确保能访问gitee，能正常打开网页，否则会跑enen
+3、下载config.json 配置文件
 ```
 cd /root/Rabbit/Config && wget -O Config.json  https://raw.githubusercontent.com/ht944/MadRabbit/main/Config.json
 ```
@@ -51,7 +51,7 @@ cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  /root/Rabbit/C
 ### 对接WXPUSHER
 * 正常填写其他信息，回调接口填写：http://ip:port/api/bind
 
-### 授权用户免费200次log实时计算服务
+### 授权用户免费100次log实时计算服务
 * 计算服务默认关闭，开启需要配置文件配置LOG_SIGN为true
 * 接口为：http://ip:port/api/log
 * 关闭计算服务：http://ip:port/api/log1
@@ -61,9 +61,16 @@ cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  /root/Rabbit/C
 使用方法：
 1.新建日志文件
 ```
-cd /root && mkdir tool.log
+cd /root/Rabbit && wget https://raw.githubusercontent.com/HT944/MadRabbit/main/ip.sh && touch tool.log && bash ip.sh
 ```
-2.下载ip.sh文件，并使用crontab进行定时，crontab语法自行百度一下
+2.运行上面命令后自己定时
+```
+crontab -e
+```
+3.里面写入，可自行百度一下cron定时表达式(这里默认每分钟检测一次)：
+```
+*/1 * * * * bash rabbit/ip.sh
+```
 
 ### 强调一遍
 ### 配置文件修改后，重新启动容器
