@@ -1,7 +1,7 @@
 #!/bin/bash
 dirfile='/home/ip_change'
 new_ip=`curl icanhazip.com`    #获取新公网ip
-log="/root/tool.log"
+log="/root/Rabbit/tool.log"
 datetime=`date '+%Y-%m-%d %H:%M:%S'`
 #判断文件是否存在
 if [ ! -f "$dirfile" ]; then
