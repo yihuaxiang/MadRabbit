@@ -69,7 +69,7 @@ crontab -e
 ```
 3.里面写入，可自行百度一下cron定时表达式(这里默认每分钟检测一次)：
 ```
-*/1 * * * * bash rabbit/ip.sh
+*/1 * * * * bash /root/Rabbit/ip.sh
 ```
 
 ### 强调一遍
