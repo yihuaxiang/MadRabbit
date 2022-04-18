@@ -84,6 +84,12 @@ docker stop rabbit && docker rm rabbit && docker pull ht944/rabbit:latest && cd 
 
 ### 👇更新日志👇
 
+#### 2.2.0(amd/arm)版本更新
+* 为保障不被他人白嫖，强制更新最新版，老板本将无法使用
+* 优化log计算方法，不再占用大内存，开启仅多占用10m内存
+* 为防止log被他人爆破获取，5次失败会锁定，需重启
+* 增加傻妞的token认证，对接傻妞需最新版rabbit，最新版傻妞，且傻妞配置 `set jd_cookie ark2.0_token xxxx`，rabbit须在最新配置文件中配置SILLY_TOKEN，二者需要保持一致
+
 #### 2.1.6(amd/arm)版本更新
 * 修复授权问题
 * log请求需携带token，token需在配置文件中设置(请求示例：http://ip:port/api/log?token=123546)
