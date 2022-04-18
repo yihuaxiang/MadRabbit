@@ -8,8 +8,8 @@
   "Closetime": "5",
   // 公告
   "Announcement": "为提高账户的安全性，请关闭免密支付。",
-  // 是否开启debug模式，默认关闭，开启设置为true
-  "debug": false,
+  // 开启DEBUG模式
+  "debug": true,
   // 自动过验证码的次数
   "AutoCaptchaCount": "5",
   // 无密码认证的http代理或socks代理
@@ -22,15 +22,19 @@
   "LOG_SIGN": false,
   // log计算请求需要携带的token
   "LOG_TOKEN": "",
-  // 账号过期预警定时
+  // 傻妞的token，傻妞不设置token，无法对接rabbit
+  "SILLY_TOKEN": "",
+  // 账号过期预警定时，关闭请留空配置
   "ExpirationCron": "30 17 * * *",
-  // 账号资产推送定时
+  // 账号资产推送定时，关闭请留空配置
   "BeanCron": "0 20 * * *",
   // WXPUSHER的APP_TOKEN
   "APP_TOKEN": "",
   // WXPUSHER你自己的UID
   "MY_WP_UID": "",
-  // 青龙配置，必须要有，不同青龙配置用,隔开
+  // 青龙配置，必须要有，不同青龙配置用,隔开，傻妞可同时配置青龙和傻妞
+  // 单个青龙时，必须删除一个青龙配置，否则会报青龙配置错误
+  // 傻妞对接需要用最新版
   "Config": [
     // 配置xdd则全部删除，配置留空
     {
