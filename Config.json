@@ -12,18 +12,27 @@
   "debug": true,
   // 自动过验证码的次数
   "AutoCaptchaCount": "5",
-  // 无密码认证的http代理或socks代理
+  // 无密码认证的http代理或socks代理,不可使用腾讯阿里的代理，腾讯阿里服务器徐使用代理
   "proxy": "",
   // XDD_URL地址
   "XDD_URL": "",
   // XDD_TOKEN
   "XDD_TOKEN": "",
-  // 是否开启log计算服务，默认不开启
-  "LOG_SIGN": false,
-  // log计算请求需要携带的token
-  "LOG_TOKEN": "",
+  // 平台注册地址：http://www.ttshitu.com/register.html
+  // 打码平台的账号
+  "TJ_USER": "",
+  // 打码平台用户密码
+  "TJ_PWD": "",
   // 傻妞的token，傻妞不设置token，无法对接rabbit
   "SILLY_TOKEN": "",
+  // 刷新登陆账号的冷却时间，立马能登陆
+  // 刷新链接示例：http://127.0.0.1:5701/api/refresh?token=132&phone=18888888888
+  // 刷新链接需要携带的token
+  // 可以不配置，不配置示例：http://127.0.0.1:5701/api/refresh?phone=18888888888
+  "REFRESH_TOKEN": "",
+  // 每个账号的间隔时间，单位是分钟
+  // 设置为0的话没有间隔，默认无间隔
+  "INTERVAL_TIME": 0,
   // 账号过期预警定时，关闭请留空配置
   "ExpirationCron": "30 17 * * *",
   // 账号资产推送定时，关闭请留空配置
