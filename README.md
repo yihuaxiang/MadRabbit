@@ -51,11 +51,6 @@ cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  /root/Rabbit/C
 ### 对接WXPUSHER
 * 正常填写其他信息，回调接口填写：http://ip:port/api/bind
 
-### 授权用户免费100次log实时计算服务
-* 计算服务默认关闭，开启需要配置文件配置LOG_SIGN为true
-* 接口为：http://ip:port/api/log
-* 关闭计算服务：http://ip:port/api/log1
-* 关闭后再启动需要重启
 
 ### 家宽ip变化的，搭配ip.sh文件使用，ip变化时，自动重启rabbit
 使用方法：
