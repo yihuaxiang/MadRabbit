@@ -101,6 +101,7 @@ docker stop rabbit && docker rm rabbit && docker pull ht944/rabbit:latest && cd 
 ## 3.2.0的arm版本升级
 ```
 docker stop rabbit && docker rm rabbit && docker pull ht944/rabbit:latest && cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  /root/Rabbit/Config:/usr/src/Project/Config -it --privileged=true  ht944/rabbit:arm-3.2.0
+```
 
 ### 👇更新日志👇
 
