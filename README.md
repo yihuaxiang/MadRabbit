@@ -40,12 +40,29 @@ cd /root/Rabbit
 
 ```
 #### 方案二：使用我的镜像
+3.1.0版本
 ```
 docker pull ht944/rabbit:latest
 ```
 启动
 ```
 cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  /root/Rabbit/Config:/usr/src/Project/Config -it --privileged=true  ht944/rabbit:latest
+```
+3.2.0的amd版本
+```
+docker pull ht944/rabbit:3.2.0
+```
+启动
+```
+cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  /root/Rabbit/Config:/usr/src/Project/Config -it --privileged=true  ht944/rabbit:3.2.0
+```
+3.2.0的arm版本
+```
+docker pull ht944/rabbit:arm-3.2.0
+```
+启动
+```
+cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  /root/Rabbit/Config:/usr/src/Project/Config -it --privileged=true  ht944/rabbit:arm-3.2.0
 ```
 
 ### 对接WXPUSHER
@@ -76,8 +93,20 @@ crontab -e
 docker stop rabbit && docker rm rabbit && docker pull ht944/rabbit:latest && cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  /root/Rabbit/Config:/usr/src/Project/Config -it --privileged=true  ht944/rabbit:latest
 ```
 
+## 3.2.0的amd版本升级
+```
+docker stop rabbit && docker rm rabbit && docker pull ht944/rabbit:latest && cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  /root/Rabbit/Config:/usr/src/Project/Config -it --privileged=true  ht944/rabbit:3.2.0
+```
+
+## 3.2.0的arm版本升级
+```
+docker stop rabbit && docker rm rabbit && docker pull ht944/rabbit:latest && cd /root/Rabbit && docker run --name rabbit -p 5701:1234  -d  -v  /root/Rabbit/Config:/usr/src/Project/Config -it --privileged=true  ht944/rabbit:arm-3.2.0
 
 ### 👇更新日志👇
+
+#### 3.2.0(amd/arm)版本更新
+* 解决验证码识别问题，不依赖打码平台
+
 
 #### 2.2.0(amd/arm)版本更新
 * 为保障不被他人白嫖，强制更新最新版，老板本将无法使用
